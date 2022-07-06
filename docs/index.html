@@ -1,0 +1,237 @@
+<!DOCTYPE html><html class="default no-js"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>minecraft-launcher-core-node - v7.0.0</title><meta name="description" content="Documentation for minecraft-launcher-core-node - v7.0.0"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.body.classList.add(localStorage.getItem(&quot;tsd-theme&quot;) || &quot;os&quot;)</script><header><div class="tsd-page-toolbar"><div class="container"><div class="table-wrap"><div class="table-cell" id="tsd-search" data-base="."><div class="field"><label for="tsd-search-field" class="tsd-widget search no-caption">Search</label><input type="text" id="tsd-search-field"/></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">minecraft-launcher-core-node - v7.0.0</a></div><div class="table-cell" id="tsd-widgets"><div id="tsd-filter"><a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a><div class="tsd-filter-group"><div class="tsd-select" id="tsd-filter-visibility"><span class="tsd-select-label">All</span><ul class="tsd-select-list"><li data-value="public">Public</li><li data-value="protected">Public/Protected</li><li data-value="private" class="selected">All</li></ul></div> <input type="checkbox" id="tsd-filter-inherited" checked/><label class="tsd-widget" for="tsd-filter-inherited">Inherited</label></div></div><a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a></div></div></div></div><div class="tsd-page-title"><div class="container"><h1> minecraft-launcher-core-node - v7.0.0</h1></div></div></header><div class="container container-main"><div class="row"><div class="col-8 col-content"><div class="tsd-panel tsd-typography">
+<a href="#minecraft-launcher-core" id="minecraft-launcher-core" style="color: inherit; text-decoration: none;">
+  <h1>Minecraft Launcher Core</h1>
+</a>
+<p><a href="https://github.com/voxelum/minecraft-launcher-core-node/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@xmcl/core.svg" alt="npm"></a>
+<a href="https://github.com/Voxelum/minecraft-launcher-core-node/actions?query=workflow%3ABuild"><img src="https://github.com/voxelum/minecraft-launcher-core-node/workflows/Build/badge.svg" alt="Build Status"></a>
+<a href="https://www.conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="Convensional Commits"></a>
+<a href="https://discord.gg/W5XVwYY7GQ"><img src="https://discord.com/api/guilds/405213567118213121/widget.png" alt="Discord"></a></p>
+<p>Provide several useful functions to build a Minecraft Launcher.</p>
+<p>Most packages are targeting the <a href="https://electronjs.org">Electron</a> environment. Feel free to report issues related to it.</p>
+<ul>
+<li><a href="#minecraft-launcher-core">Minecraft Launcher Core</a><ul>
+<li><a href="#looking-for-c-launcher-core">Looking for C# Launcher Core?</a></li>
+<li><a href="#featured-launcher">Featured Launcher</a></li>
+<li><a href="#installation--usage">Installation &amp; Usage</a><ul>
+<li><a href="#bundle--treeshaking">Bundle &amp; Treeshaking</a></li>
+<li><a href="#commonjs">CommonJS</a></li>
+<li><a href="#electron-version">Electron Version</a></li>
+</ul>
+</li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#active-packages">Active Packages</a></li>
+<li><a href="#contribute">Contribute</a></li>
+<li><a href="#credit">Credit</a></li>
+</ul>
+</li>
+</ul>
+
+<a href="#looking-for-c-launcher-core" id="looking-for-c-launcher-core" style="color: inherit; text-decoration: none;">
+  <h3>Looking for C# Launcher Core?</h3>
+</a>
+<p>Introduce the awesome .net framework launcher core, <a href="https://github.com/Corona-Studio/ProjBobcat">ProjBobcat</a>.</p>
+<p>It&#39;s the next generation Minecraft launcher core written in C# providing the freest, fastest and the most complete experience. <a href="https://craftmine.fun">https://craftmine.fun</a></p>
+
+<a href="#featured-launcher" id="featured-launcher" style="color: inherit; text-decoration: none;">
+  <h3>Featured Launcher</h3>
+</a>
+<ul>
+<li><a href="https://github.com/voxelum/x-minecraft-launcher">x-minecraft-launcher</a>: An launcher provides general electron api related to minecraft launching (in renderer side), making other developers can easily create new launcher view.</li>
+<li><a href="https://github.com/Apisium/PureLauncher">PureLauncher</a>: An awesome Minecraft Launcher using React to build beautiful UI.</li>
+</ul>
+
+<a href="#installation-amp-usage" id="installation-amp-usage" style="color: inherit; text-decoration: none;">
+  <h2>Installation &amp; Usage</h2>
+</a>
+<p>This repo maintaining multiple mini packages for specific functions.</p>
+<p>If you use electron to write a minimum launcher, you can install <code>@xmcl/core</code> which only has such functions:</p>
+<ul>
+<li>Parse existed Minecraft version</li>
+<li>Launch the game</li>
+</ul>
+<p>If you have bigger ambition on your launcher, you want it be able to download/install Minecraft, then you can have <code>@xmcl/installer</code>, which contains the functions of:</p>
+<ul>
+<li>Get the version information of Minecraft/Forge/Liteloader/Fabric</li>
+<li>Install Minecraft/Forge/Liteloader/Fabric to the game folder</li>
+</ul>
+<p>If you still not satisfied, as you want even provide the function to parse existed resource pack and mods under game folder, then you will have <code>@xmcl/mod-parser</code> and <code>@xmcl/resourcepack</code> modules, which contain such functions:</p>
+<ul>
+<li>Parse Forge/Liteloader/Fabric mods metadata</li>
+<li>Parse resource pack metadata</li>
+</ul>
+<p>There are more packages for advantage usages, and you can check out the getting started section to navigate.</p>
+
+<a href="#bundle-amp-treeshaking" id="bundle-amp-treeshaking" style="color: inherit; text-decoration: none;">
+  <h3>Bundle &amp; Treeshaking</h3>
+</a>
+<p>The module built with <code>ES5</code> module option by typescript. To use treeshake, please make sure your bundle system support esm import/export.</p>
+<p>Some bundler like webpack, rollup support treeshake by default. Just make sure you dont do something like <code>import * as SomeNamespace from ...</code>, which will bundle the whole package.
+(But <code>import { xxx } from &#39;xxx&#39;</code> will still work)</p>
+
+<a href="#commonjs" id="commonjs" style="color: inherit; text-decoration: none;">
+  <h3>CommonJS</h3>
+</a>
+<p>If you don&#39;t have a bundler to transform the package, you can still use it in cjs. The webpack will pick the <code>&quot;main&quot;</code> field in <code>package.json</code> which is pointing to the cjs version.</p>
+<p>It means you don&#39;t need to do anything in extra ideally.</p>
+
+<a href="#electron-version" id="electron-version" style="color: inherit; text-decoration: none;">
+  <h3>Electron Version</h3>
+</a>
+<p>Recommend to use the latest electron, so you don&#39;t need to setup babel with webpack 4.</p>
+
+<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+  <h2>Getting Started</h2>
+</a>
+<blockquote>
+<p>Please respect the typescript interface and jsdoc in type definition if the markdown document is outdated. Contact the developer if you find the document outdated or mismatched!</p>
+</blockquote>
+<p>Go <a href="/USAGE.md">Getting Started</a> page.</p>
+<p>Or you can read the full <a href="https://voxelum.github.io/minecraft-launcher-core-node/">document</a>.</p>
+
+<a href="#active-packages" id="active-packages" style="color: inherit; text-decoration: none;">
+  <h2>Active Packages</h2>
+</a>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Usage</th>
+<th>Version</th>
+<th>Location</th>
+<th>Runtime Envrionment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>@xmcl/core</td>
+<td>Launch Minecraft</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/core"><img src="https://img.shields.io/npm/v/@xmcl/core.svg" alt="npm version"></a></td>
+<td><a href="/packages/core">packages/core             </a></td>
+<td>Node</td>
+</tr>
+<tr>
+<td>@xmcl/installer</td>
+<td>Install Minecraft</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/installer"><img src="https://img.shields.io/npm/v/@xmcl/installer.svg" alt="npm version"></a></td>
+<td><a href="/packages/installer">packages/installer        </a></td>
+<td>Node</td>
+</tr>
+<tr>
+<td>@xmcl/user</td>
+<td>User Authentication and skin</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/user"><img src="https://img.shields.io/npm/v/@xmcl/user.svg" alt="npm version"></a></td>
+<td><a href="/packages/user">packages/user             </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/mod-parser</td>
+<td>Parse forge/liteloader/fabric mod</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/mod-parser"><img src="https://img.shields.io/npm/v/@xmcl/mod-parser.svg" alt="npm version"></a></td>
+<td><a href="/packages/mod-parser">packages/mod-parser       </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/modrinth</td>
+<td>Provide Modrinth API</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/modrinth"><img src="https://img.shields.io/npm/v/@xmcl/modrinth.svg" alt="npm version"></a></td>
+<td><a href="/packages/modrinth">packages/modrinth         </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/forge-site-parser</td>
+<td>Parse forge website</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/forge-site-parser"><img src="https://img.shields.io/npm/v/@xmcl/forge-site-parser.svg" alt="npm version"></a></td>
+<td><a href="/packages/forge-site-parser">packages/forge-site-parser</a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/client</td>
+<td>Ping Minecraft Server</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/client"><img src="https://img.shields.io/npm/v/@xmcl/client.svg" alt="npm version"></a></td>
+<td><a href="/packages/client">packages/client           </a></td>
+<td>Node</td>
+</tr>
+<tr>
+<td>@xmcl/model</td>
+<td>Display player/block model</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/model"><img src="https://img.shields.io/npm/v/@xmcl/model.svg" alt="npm version"></a></td>
+<td><a href="/packages/model">packages/model            </a></td>
+<td>Browser</td>
+</tr>
+<tr>
+<td>@xmcl/gamesetting</td>
+<td>Parse game setting</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/gamesetting"><img src="https://img.shields.io/npm/v/@xmcl/gamesetting.svg" alt="npm version"></a></td>
+<td><a href="/packages/gamesetting">packages/gamesetting      </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/nbt</td>
+<td>Parse NBT</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/nbt"><img src="https://img.shields.io/npm/v/@xmcl/nbt.svg" alt="npm version"></a></td>
+<td><a href="/packages/nbt">packages/nbt              </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/text-component</td>
+<td>Parse and render Minecraft Text</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/text-component"><img src="https://img.shields.io/npm/v/@xmcl/text-component.svg" alt="npm version"></a></td>
+<td><a href="/packages/text-component">packages/text-component   </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/world</td>
+<td>Load save metadata</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/world"><img src="https://img.shields.io/npm/v/@xmcl/world.svg" alt="npm version"></a></td>
+<td><a href="/packages/world">packages/world            </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/resourcepack</td>
+<td>Parse resource pack</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/resourcepack"><img src="https://img.shields.io/npm/v/@xmcl/resourcepack.svg" alt="npm version"></a></td>
+<td><a href="/packages/resourcepack">packages/resourcepack     </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/server-info</td>
+<td>Parse servers.dat</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/server-info"><img src="https://img.shields.io/npm/v/@xmcl/server-info.svg" alt="npm version"></a></td>
+<td><a href="/packages/server-info">packages/server-info      </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/task</td>
+<td>Util package to create task</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/task"><img src="https://img.shields.io/npm/v/@xmcl/task.svg" alt="npm version"></a></td>
+<td><a href="/packages/task">packages/task             </a></td>
+<td>Node</td>
+</tr>
+<tr>
+<td>@xmcl/system</td>
+<td>A fs middleware for browser/node</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/system"><img src="https://img.shields.io/npm/v/@xmcl/system.svg" alt="npm version"></a></td>
+<td><a href="/packages/system">packages/system           </a></td>
+<td>Node/Browser</td>
+</tr>
+<tr>
+<td>@xmcl/unzip</td>
+<td>yauzl unzip wrapper</td>
+<td><a href="https://www.npmjs.com/package/@xmcl/unzip"><img src="https://img.shields.io/npm/v/@xmcl/unzip.svg" alt="npm version"></a></td>
+<td><a href="/packages/unzip">packages/unzip            </a></td>
+<td>Node</td>
+</tr>
+</tbody></table>
+
+<a href="#contribute" id="contribute" style="color: inherit; text-decoration: none;">
+  <h2>Contribute</h2>
+</a>
+<p>See <a href="/CONTRIBUTE.md">Contribute.md</a></p>
+
+<a href="#credit" id="credit" style="color: inherit; text-decoration: none;">
+  <h2>Credit</h2>
+</a>
+<p><a href="https://github.com/lukechu10">lukechu10</a> helped me to generate the document from typescript.</p>
+<p><a href="https://github.com/HoldYourWaffle">HoldYourWaffle</a> provided great suggestions to repo.</p>
+<p><a href="https://github.com/yuxuanchiadm">Yu Xuanchi</a> provided some idea about NBT module.</p>
+<p><a href="https://github.com/yushijinhun">Haowei Wen</a>, the author of <a href="https://github.com/to2mbn/JMCCC">JMCCC</a>, <a href="https://github.com/to2mbn/authlib-injector">Authlib Injector</a>, and <a href="https://github.com/Indexyz">Indexyz</a>, helped me a lot on Minecraft launching, authing.</p>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_asm.html">@xmcl/asm</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_client.html">@xmcl/client</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_core.html">@xmcl/core</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_curseforge.html">@xmcl/curseforge</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_forge_site_parser.html">@xmcl/forge-<wbr/>site-<wbr/>parser</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_gamesetting.html">@xmcl/gamesetting</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_installer.html">@xmcl/installer</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_mod_parser.html">@xmcl/mod-<wbr/>parser</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_model.html">@xmcl/model</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_nbt.html">@xmcl/nbt</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_resourcepack.html">@xmcl/resourcepack</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_server_info.html">@xmcl/server-<wbr/>info</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_system.html">@xmcl/system</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_task.html">@xmcl/task</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_text_component.html">@xmcl/text-<wbr/>component</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_unzip.html">@xmcl/unzip</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_user.html">@xmcl/user</a></li><li class=" tsd-kind-module"><a href="modules/xmcl_world.html">@xmcl/world</a></li><li class=" tsd-kind-module"><a href="modules/modrinth.html">modrinth</a></li></ul></nav></div></div></div><footer class=""><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-namespace"><span class="tsd-kind-icon">Namespace</span></li><li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li><li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li><li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li><li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li><li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li><li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li><li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li></ul><ul class="tsd-legend"><li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="overlay"></div><script src="assets/main.js"></script></body></html>
